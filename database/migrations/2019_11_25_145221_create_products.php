@@ -20,6 +20,7 @@ class CreateProducts extends Migration
             $table->string('description', 300);
             $table->string('quantity');
             $table->float('price', 10, 2);
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->integer('active');
             $table->timestamps();
